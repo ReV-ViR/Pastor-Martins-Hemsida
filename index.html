@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibelstudier</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Grundläggande stil */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #005b96;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .tab-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      background: #ddd;
+      border-radius: 5px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      text-align: center;
+      flex: 1;
+      background: #ddd;
+      border-right: 1px solid #bbb;
+      font-weight: bold;
+    }
+
+    .tab:last-child {
+      border-right: none;
+    }
+
+    .tab.active {
+      background: #005b96;
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      background: #005b96;
+      color: white;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bibelstudier</h1>
+    <p>Välj ett tema för att lyssna på undervisningen.</p>
+  </header>
+
+  <main>
+    <div class="tab-container">
+      <div class="tab active" data-tab="tab1">Sex och relationer</div>
+      <div class="tab" data-tab="tab2">Bön</div>
+      <div class="tab" data-tab="tab3">Kyrkohistoria</div>
+    </div>
+
+    <div class="tab-content active" id="tab1">
+      <ul>
+        <li>
+          <h3>Sex och relationer - Del 1</h3>
+          <audio controls>
+            <source src="Sex och relationer Del 1.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+        <li>
+          <h3>Sex och relationer - Del 2</h3>
+          <audio controls>
+            <source src="Sex och relationer Del 2.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="tab2">
+      <ul>
+        <li>
+          <h3>Bön - Del 1</h3>
+          <audio controls>
+            <source src="Bön Del 1.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+        <li>
+          <h3>Bön - Del 2</h3>
+          <audio controls>
+            <source src="Bön Del 2.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+        <li>
+          <h3>Bön - Del 3</h3>
+          <audio controls>
+            <source src="Bön Del 3.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="tab3">
+      <ul>
+        <li>
+          <h3>Kyrkohistoria - Del 1</h3>
+          <audio controls>
+            <source src="Kyrkohistoria Del 1.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+        <li>
+          <h3>Kyrkohistoria - Del 2</h3>
+          <audio controls>
+            <source src="Kyrkohistoria Del 2.m4a" type="audio/mp4">
+            Din webbläsare stöder inte ljuduppspelning.
+          </audio>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Kontakt: <a href="mailto:martin@dinadress.se">martin@dinadress.se</a></p>
+    <p>&copy; 2024 Karlskoga Degerfors Baptistförsamling</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => {
+          content.classList.remove('active');
+        });
+
+        const target = document.getElementById(tab.dataset.tab);
+        target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
