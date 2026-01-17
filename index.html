@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="sv">
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Pastor Martins Hemsida</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -46,6 +48,7 @@
       margin-bottom: 20px;
       background: #ddd;
       border-radius: 5px;
+      flex-wrap: wrap;
     }
 
     .tab {
@@ -53,6 +56,7 @@
       cursor: pointer;
       text-align: center;
       flex: 1;
+      min-width: 160px;
       font-weight: bold;
       background: #ddd;
       border-right: 1px solid #bbb;
@@ -112,8 +116,27 @@
       color: #ffd700;
       text-decoration: none;
     }
+
+    /* --- Player UI enhancements --- */
+    li.playing {
+      border-left: 6px solid #005b96;
+      background: #eef5ff;
+    }
+
+    .now-playing {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-left: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #005b96;
+      color: #fff;
+      vertical-align: middle;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Pastor Martins Hemsida</h1>
@@ -121,20 +144,21 @@
   </header>
 
   <main>
-<div class="tab-container">
-  <div class="tab active" data-tab="tab1">Blodsförbundet</div>
-  <div class="tab" data-tab="tab2">Bön</div>
-  <div class="tab" data-tab="tab3">Den Helige Ande</div>
-  <div class="tab" data-tab="tab4">Försoningslära</div>
-  <div class="tab" data-tab="tab5">Kyrkohistoria</div>
-  <div class="tab" data-tab="tab6">Sex och relationer</div>
-</div>
+    <div class="tab-container">
+      <div class="tab active" data-tab="tab1">Blodsförbundet</div>
+      <div class="tab" data-tab="tab2">Bön</div>
+      <div class="tab" data-tab="tab3">Den Helige Ande</div>
+      <div class="tab" data-tab="tab4">Försoningslära</div>
+      <div class="tab" data-tab="tab5">Kyrkohistoria</div>
+      <div class="tab" data-tab="tab6">Sex och relationer</div>
+      <div class="tab" data-tab="tab7">Änglar och demoner</div>
+    </div>
 
-<div class="tab-content active" id="tab1">
-  <h2>Blodsförbundet</h2>
-  <p><strong>Tack Ola Gustavsson för inspirationen – mycket av materialet är hämtat från dina undervisningar.</strong></p>
-  <ul>
-    <li><h3>Blodsförbundet Del 1</h3><audio controls><source src="Blodsfoerbundet Del 1.m4a" type="audio/mp4"></audio></li>
+    <div class="tab-content active" id="tab1">
+      <h2>Blodsförbundet</h2>
+      <p><strong>Tack Ola Gustavsson för inspirationen – mycket av materialet är hämtat från dina undervisningar.</strong></p>
+      <ul>
+        <li><h3>Blodsförbundet Del 1</h3><audio controls><source src="Blodsfoerbundet Del 1.m4a" type="audio/mp4"></audio></li>
         <li><h3>Blodsförbundet Del 2</h3><audio controls><source src="Blodsfoerbundet Del 2.m4a" type="audio/mp4"></audio></li>
         <li><h3>Blodsförbundet Del 3</h3><audio controls><source src="Blodsfoerbundet Del 3.m4a" type="audio/mp4"></audio></li>
         <li><h3>Blodsförbundet Del 4</h3><audio controls><source src="Blodsfoerbundet Del 4.m4a" type="audio/mp4"></audio></li>
@@ -150,100 +174,80 @@
         <li><h3>Blodsförbundet Del 14</h3><audio controls><source src="Blodsfoerbundet Del 14.m4a" type="audio/mp4"></audio></li>
         <li><h3>Blodsförbundet Del 15</h3><audio controls><source src="Blodsfoerbundet Del 15.m4a" type="audio/mp4"></audio></li>
       </ul>
-    </div>   
+    </div>
 
-<div class="tab-content" id="tab2">
-  <h2>Bön</h2>
-  <ul>
-    <li><h3>Bön Del 1</h3><audio controls><source src="Boen Del 1.m4a" type="audio/mp4"></audio></li>
-        <li>
-          <h3>Bön Del 2</h3>
-          <audio controls>
-            <source src="Boen Del 2.m4a" type="audio/mp4">
-          </audio>
-        </li>
-        <li>
-          <h3>Bön Del 3</h3>
-          <audio controls>
-            <source src="Boen Del 3.m4a" type="audio/mp4">
-          </ul>
-    </div>    
+    <div class="tab-content" id="tab2">
+      <h2>Bön</h2>
+      <ul>
+        <li><h3>Bön Del 1</h3><audio controls><source src="Boen Del 1.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Bön Del 2</h3><audio controls><source src="Boen Del 2.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Bön Del 3</h3><audio controls><source src="Boen Del 3.m4a" type="audio/mp4"></audio></li>
+      </ul>
+    </div>
 
-<div class="tab-content" id="tab3">
-  <h2>Den Helige Ande</h2>
-  <ul>
-    <li>
-      <h3>Den Helige Ande – Del 1</h3>
-      <audio controls>
-        <source src="Den Helige Ande Del 1.m4a" type="audio/mp4">
-      </audio>
-    </li>
-    <li>
-      <h3>Den Helige Ande – Del 2</h3>
-      <audio controls>
-        <source src="Den Helige Ande Del 2.m4a" type="audio/mp4">
-      </audio>
-    </li>
-  </ul>
-</div>
+    <div class="tab-content" id="tab3">
+      <h2>Den Helige Ande</h2>
+      <ul>
+        <li><h3>Den Helige Ande – Del 1</h3><audio controls><source src="Den Helige Ande Del 1.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Den Helige Ande – Del 2</h3><audio controls><source src="Den Helige Ande Del 2.m4a" type="audio/mp4"></audio></li>
+      </ul>
+    </div>
 
-<div class="tab-content" id="tab4">
-  <h2>Försoningslära</h2>
-  <ul>
-    <li>
-      <h3>Försoningslära – Del 1</h3>
-      <audio controls>
-        <source src="Försoningslära Del 1.m4a" type="audio/mp4">
-      </audio>
-    </li>
-    <li>
-      <h3>Försoningslära – Del 2</h3>
-      <audio controls>
-        <source src="Försoningslära Del 2.m4a" type="audio/mp4">
-      </audio>
-    </li>
-    <li>
-      <h3>Försoningslära – Del 3</h3>
-      <audio controls>
-        <source src="Försoningslära Del 3.m4a" type="audio/mp4">
-      </audio>
-    </li>
-  </ul>
-</div>
-    
-<div class="tab-content" id="tab5">
-  <h2>Kyrkohistoria</h2>
-  <ul>
-    <li><h3>Kyrkohistoria Del 1</h3><audio controls><source src="Kyrkohistoria Del 1.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 2</h3><audio controls><source src="Kyrkohistoria Del 2.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 3</h3><audio controls><source src="Kyrkohistoria Del 3.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 4</h3><audio controls><source src="Kyrkohistoria Del 4.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 5</h3><audio controls><source src="Kyrkohistoria Del 5.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 6</h3><audio controls><source src="Kyrkohistoria Del 6.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 7</h3><audio controls><source src="Kyrkohistoria Del 7.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 8</h3><audio controls><source src="Kyrkohistoria Del 8.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 9</h3><audio controls><source src="Kyrkohistoria Del 9.m4a" type="audio/mp4"></audio></li>
-    <li><h3>Kyrkohistoria Del 10</h3><audio controls><source src="Kyrkohistoria Del 10.m4a" type="audio/mp4"></audio></li>
-  </ul>
-</div>
-<div class="tab-content" id="tab6">
-  <h2>Sex och relationer</h2>
-  <ul>
-    <li>
-      <h3>Sex och relationer Del 1</h3>
-      <audio controls>
-        <source src="Sex och relationer Del 1.m4a" type="audio/mp4">
-      </audio>
-    </li>
-    <li>
-      <h3>Sex och relationer Del 2</h3>
-      <audio controls>
-        <source src="Sex och relationer Del 2.m4a" type="audio/mp4">
-      </audio>
-    </li>
-  </ul>
-</div>
-    
+    <div class="tab-content" id="tab4">
+      <h2>Försoningslära</h2>
+      <ul>
+        <li><h3>Försoningslära – Del 1</h3><audio controls><source src="Försoningslära Del 1.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Försoningslära – Del 2</h3><audio controls><source src="Försoningslära Del 2.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Försoningslära – Del 3</h3><audio controls><source src="Försoningslära Del 3.m4a" type="audio/mp4"></audio></li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="tab5">
+      <h2>Kyrkohistoria</h2>
+      <ul>
+        <li><h3>Kyrkohistoria Del 1</h3><audio controls><source src="Kyrkohistoria Del 1.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 2</h3><audio controls><source src="Kyrkohistoria Del 2.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 3</h3><audio controls><source src="Kyrkohistoria Del 3.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 4</h3><audio controls><source src="Kyrkohistoria Del 4.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 5</h3><audio controls><source src="Kyrkohistoria Del 5.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 6</h3><audio controls><source src="Kyrkohistoria Del 6.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 7</h3><audio controls><source src="Kyrkohistoria Del 7.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 8</h3><audio controls><source src="Kyrkohistoria Del 8.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 9</h3><audio controls><source src="Kyrkohistoria Del 9.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 10</h3><audio controls><source src="Kyrkohistoria Del 10.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 11</h3><audio controls><source src="Kyrkohistoria Del 11.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 12</h3><audio controls><source src="Kyrkohistoria Del 12.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 13</h3><audio controls><source src="Kyrkohistoria Del 13.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 14</h3><audio controls><source src="Kyrkohistoria Del 14.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 15</h3><audio controls><source src="Kyrkohistoria Del 15.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 16</h3><audio controls><source src="Kyrkohistoria Del 16.m4a" type="audio/mp4"></audio></li>
+
+        <li><h3>Pingstväckelsens historia Del 1</h3><audio controls><source src="Pingstväckelsens historia Del 1.mp3" type="audio/mpeg"></audio></li>
+        <li><h3>Pingstväckelsens historia Del 2</h3><audio controls><source src="Pingstväckelsens historia Del 2.mp3" type="audio/mpeg"></audio></li>
+
+        <li><h3>Kyrkohistoria Del 17</h3><audio controls><source src="Kyrkohistoria Del 17.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 18</h3><audio controls><source src="Kyrkohistoria Del 18.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Kyrkohistoria Del 19</h3><audio controls><source src="Kyrkohistoria Del 19.m4a" type="audio/mp4"></audio></li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="tab6">
+      <h2>Sex och relationer</h2>
+      <ul>
+        <li><h3>Sex och relationer Del 1</h3><audio controls><source src="Sex och relationer Del 1.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Sex och relationer Del 2</h3><audio controls><source src="Sex och relationer Del 2.m4a" type="audio/mp4"></audio></li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="tab7">
+      <h2>Änglar och demoner</h2>
+      <ul>
+        <li><h3>Änglar och demoner – Del 1</h3><audio controls><source src="Anglar och demoner Del 1.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Änglar och demoner – Del 2</h3><audio controls><source src="Anglar och demoner Del 2.m4a" type="audio/mp4"></audio></li>
+        <li><h3>Änglar och demoner – Del 3</h3><audio controls><source src="Anglar och demoner Del 3.m4a" type="audio/mp4"></audio></li>
+      </ul>
+    </div>
+
   </main>
 
   <footer>
@@ -251,28 +255,82 @@
     <p>Karlskoga-Degerfors Baptistförsamling</p>
     <p>Telefon: 073-613 0782</p>
   </footer>
-<script>
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.tab-content');
-  const hoverSound = new Audio('hover.wav');
-  const clickSound = new Audio('click.wav');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('mouseenter', () => {
-      hoverSound.play();
+  <script>
+    // Tabs
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    const hoverSound = new Audio('hover.wav');
+    const clickSound = new Audio('click.wav');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+      });
+
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => content.classList.remove('active'));
+        const target = document.getElementById(tab.dataset.tab);
+        if (target) target.classList.add('active');
+
+        clickSound.currentTime = 0;
+        clickSound.play();
+      });
     });
 
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+    // Audio UX: "Spelas nu" + autopause other tracks
+    const audios = Array.from(document.querySelectorAll('audio'));
 
-      contents.forEach(content => content.classList.remove('active'));
-      const target = document.getElementById(tab.dataset.tab);
-      target.classList.add('active');
+    function clearNowPlaying() {
+      document.querySelectorAll('li.playing').forEach(li => li.classList.remove('playing'));
+      document.querySelectorAll('.now-playing').forEach(badge => badge.remove());
+    }
 
-      clickSound.play();
+    function setNowPlaying(audio) {
+      const li = audio.closest('li');
+      if (!li) return;
+
+      // remove previous marker
+      clearNowPlaying();
+
+      // mark this one
+      li.classList.add('playing');
+
+      const h3 = li.querySelector('h3');
+      if (h3) {
+        const badge = document.createElement('span');
+        badge.className = 'now-playing';
+        badge.textContent = 'Spelas nu';
+        h3.appendChild(badge);
+      }
+    }
+
+    audios.forEach(a => {
+      a.addEventListener('play', () => {
+        // Pause all others
+        audios.forEach(other => {
+          if (other !== a && !other.paused) other.pause();
+        });
+
+        setNowPlaying(a);
+      });
+
+      // If the current one is paused, remove marker
+      a.addEventListener('pause', () => {
+        const li = a.closest('li');
+        if (li && li.classList.contains('playing')) clearNowPlaying();
+      });
+
+      // When ended, clear marker
+      a.addEventListener('ended', () => {
+        const li = a.closest('li');
+        if (li && li.classList.contains('playing')) clearNowPlaying();
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
