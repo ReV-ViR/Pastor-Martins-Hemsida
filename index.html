@@ -106,20 +106,30 @@ function setMediaSession({ title, series }) {
         folder: "forsoningslara",
         items: [1, 2, 3].map(n => ({ title: `Försoningslära – Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` }))
       },
-      {
-        id: "kyrkohistoria",
-        tabTitle: "Kyrkohistoria",
-        heading: "Kyrkohistoria",
-        folder: "kyrkohistoria",
-        items: [
-          ...Array.from({ length: 19 }, (_, i) => {
-            const n = i + 1;
-            return { title: `Kyrkohistoria Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` };
-          }),
-          { title: "Pingstväckelsens historia Del 1", file: "pingstvackelsens-historia-del-01.mp3" },
-          { title: "Pingstväckelsens historia Del 2", file: "pingstvackelsens-historia-del-02.mp3" }
-        ]
-      },
+     {
+  id: "kyrkohistoria",
+  tabTitle: "Kyrkohistoria",
+  heading: "Kyrkohistoria",
+  folder: "kyrkohistoria",
+  items: [
+    // Del 1–16
+    ...Array.from({ length: 16 }, (_, i) => {
+      const n = i + 1;
+      return { title: `Kyrkohistoria Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` };
+    }),
+
+    // Pingstväckelsens historia (mellan 16 och 17)
+    { title: "Pingstväckelsens historia Del 1", file: "pingstvackelsens-historia-del-01.mp3" },
+    { title: "Pingstväckelsens historia Del 2", file: "pingstvackelsens-historia-del-02.mp3" },
+
+    // Del 17–19
+    ...Array.from({ length: 3 }, (_, i) => {
+      const n = i + 17;
+      return { title: `Kyrkohistoria Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` };
+    })
+  ]
+},
+
       {
         id: "sex-och-relationer",
         tabTitle: "Sex och relationer",
@@ -378,7 +388,7 @@ function setMediaSession({ title, series }) {
     series: audioEl.getAttribute("data-series-title") || "Okänd serie"
   });
 }
-
+	
 
     miniAudio.addEventListener("play", () => {
       // pausa alla andra
