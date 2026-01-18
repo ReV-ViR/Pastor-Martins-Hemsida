@@ -824,5 +824,21 @@
     // Start: återställ senast lyssnade om det finns
     restoreState();
   </script>
+// === R2 base URL (din) ===
+const R2_BASE = "https://pub-bac38cc7629d4743b23aabcdaaebae74.r2.dev/";
+
+// Gör om alla relativa audio-src till R2-länkar (med URL-encoding)
+document.querySelectorAll('audio source').forEach(source => {
+  const src = source.getAttribute('src');
+  if (!src) return;
+  if (/^https?:\/\//i.test(src)) return; // redan extern
+
+  source.setAttribute('src', R2_BASE + encodeURIComponent(src));
+
+  // Ladda om metadatan för att få längd/duration
+  const audio = source.closest('audio');
+  if (audio) audio.load();
+});
+
 </body>
 </html>
