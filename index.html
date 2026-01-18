@@ -3,337 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pastor Martins Hemsida</title>
+  <title>Pastor Martins undervisning</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    :root{
-      --brand:#005b96;
-      --bg:#f6f7f9;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --border:#e5e7eb;
-      --chip:#e8f1ff;
-    }
-
-    body{
-      font-family: Arial, sans-serif;
-      margin:0;
-      padding:0;
-      background:var(--bg);
-      color:#111827;
-    }
-
-    header{
-      background:var(--brand);
-      color:#fff;
-      text-align:center;
-      padding:18px 14px;
-    }
-    header h1{ margin:0; font-size:2rem; }
-    header p{ margin:6px 0 0; font-size:1.05rem; opacity:.95; }
-
-    main{
-      max-width: 980px;
-      margin: 16px auto 120px; /* extra bottom for mini-player */
-      padding: 14px;
-      background: var(--card);
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.06);
-    }
-
-    .top-note{
-      margin: 10px 0 18px;
-      padding: 12px 12px;
-      border:1px solid var(--border);
-      border-radius: 10px;
-      background: #fbfbfc;
-      color:#111827;
-      line-height:1.35;
-    }
-    .top-note .muted{ color:var(--muted); font-size:.95rem; }
-
-    .tab-container{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin-bottom:14px;
-      padding:10px;
-      background:#eef0f3;
-      border-radius:12px;
-    }
-
-    .tab{
-      cursor:pointer;
-      user-select:none;
-      padding:10px 12px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid var(--border);
-      font-weight:700;
-      font-size:.95rem;
-      flex: 1 1 160px;
-      text-align:center;
-      transition: transform .08s ease, background .2s ease, color .2s ease, border-color .2s ease;
-    }
-    .tab:hover{ transform: translateY(-1px); border-color:#cbd5e1; }
-    .tab.active{
-      background:var(--brand);
-      color:#fff;
-      border-color:var(--brand);
-    }
-
-    .tab-content{ display:none; }
-    .tab-content.active{ display:block; }
-
-    h2{ margin: 6px 0 12px; font-size:1.25rem; }
-    ul{ list-style:none; padding:0; margin:0; }
-    li{
-      background:#f8fafc;
-      border:1px solid var(--border);
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 12px;
-    }
-
-    .item-head{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      margin-bottom: 8px;
-    }
-    .item-title{
-      margin:0;
-      font-size:1.02rem;
-      font-weight:800;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding: 4px 10px;
-      border-radius:999px;
-      background: var(--chip);
-      border: 1px solid #cfe2ff;
-      color:#0b4a7a;
-      font-size:.85rem;
-      font-weight:700;
-    }
-
-    audio{ width:100%; }
-
-    footer{
-      margin-top: 16px;
-      text-align:center;
-      background:var(--brand);
-      color:#fff;
-      padding: 12px 10px;
-    }
-    footer a{ color:#ffd700; text-decoration:none; }
-
-    /* Mini player */
-    .mini-player{
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255,255,255,.96);
-      border-top: 1px solid var(--border);
-      box-shadow: 0 -6px 18px rgba(0,0,0,.08);
-      padding: 10px 12px;
-      z-index: 9999;
-      backdrop-filter: blur(8px);
-    }
-    .mini-wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-    }
-    .mini-meta{
-      min-width: 240px;
-      flex: 1 1 280px;
-    }
-    .mini-title{
-      font-weight:900;
-      margin: 0 0 2px;
-      font-size: .98rem;
-    }
-    .mini-sub{
-      margin:0;
-      color:var(--muted);
-      font-size: .88rem;
-    }
-    .mini-actions{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      flex: 0 0 auto;
-    }
-    .btn{
-      border:1px solid var(--border);
-      background:#fff;
-      border-radius: 10px;
-      padding: 8px 10px;
-      font-weight:800;
-      cursor:pointer;
-    }
-    .btn:hover{ border-color:#cbd5e1; }
-    .btn.primary{
-      background: var(--brand);
-      border-color: var(--brand);
-      color:#fff;
-    }
-
-    .mini-audio{
-      width: min(520px, 100%);
-      flex: 1 1 360px;
-    }
-
-    @media (max-width: 640px){
-      header h1{ font-size:1.6rem; }
-      .tab{ flex: 1 1 46%; }
-      main{ margin-bottom: 150px; }
-      .mini-wrap{ gap:8px; }
-      .mini-meta{ flex: 1 1 100%; }
-      .mini-audio{ flex: 1 1 100%; }
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <h1>Pastor Martins Hemsida</h1>
-    <p>Undervisning och resurser</p>
+    <h1>Pastor Martins undervisning</h1>
+    <p>Ljudserier</p>
   </header>
 
   <main>
     <div class="top-note">
-      <div><strong>Lyssna gärna i ordning. Pröva allt mot Skriften och behåll det goda.</strong></div>
-      <div class="muted">Tips: När du startar ett avsnitt pausas alla andra automatiskt. Sidan kommer ihåg senast spelade avsnitt.</div>
+      <div><strong>Tips:</strong> När du startar ett avsnitt pausas alla andra automatiskt. Sidan kommer ihåg senast spelade avsnitt.</div>
     </div>
 
-    <div class="tab-container" role="tablist" aria-label="Undervisningsserier">
-      <div class="tab active" data-tab="tab1" role="tab" aria-selected="true">Blodsförbundet</div>
-      <div class="tab" data-tab="tab2" role="tab" aria-selected="false">Bön</div>
-      <div class="tab" data-tab="tab3" role="tab" aria-selected="false">Den Helige Ande</div>
-      <div class="tab" data-tab="tab4" role="tab" aria-selected="false">Försoningslära</div>
-      <div class="tab" data-tab="tab5" role="tab" aria-selected="false">Kyrkohistoria</div>
-      <div class="tab" data-tab="tab6" role="tab" aria-selected="false">Sex och relationer</div>
-      <div class="tab" data-tab="tab7" role="tab" aria-selected="false">Änglar och demoner</div>
-    </div>
-
-    <!-- TAB 1 -->
-    <div class="tab-content active" id="tab1" role="tabpanel">
-      <h2>Blodsförbundet</h2>
-      <p><strong>Tack Ola Gustavsson för inspirationen – mycket av materialet är hämtat från dina undervisningar.</strong></p>
-      <ul>
-        <li>
-          <div class="item-head">
-            <h3 class="item-title">Blodsförbundet Del 1</h3>
-            <span class="chip now-playing-chip" hidden>Spelas nu</span>
-          </div>
-          <audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 1.m4a"></audio>
-        </li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 2.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 3</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 3.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 4</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 4.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 5</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 5.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 6</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 6.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 7</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 7.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 8</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 8.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 9</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 9.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 10</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 10.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 11</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 11.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 12</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 12.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 13</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 13.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 14</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 14.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Blodsförbundet Del 15</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Blodsförbundet" data-file="Blodsfoerbundet Del 15.m4a"></audio></li>
-      </ul>
-    </div>
-
-    <!-- TAB 2 -->
-    <div class="tab-content" id="tab2" role="tabpanel">
-      <h2>Bön</h2>
-      <ul>
-        <li><div class="item-head"><h3 class="item-title">Bön Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Bön" data-file="Boen Del 1.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Bön Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Bön" data-file="Boen Del 2.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Bön Del 3</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Bön" data-file="Boen Del 3.m4a"></audio></li>
-      </ul>
-    </div>
-
-    <!-- TAB 3 -->
-    <div class="tab-content" id="tab3" role="tabpanel">
-      <h2>Den Helige Ande</h2>
-      <ul>
-        <li><div class="item-head"><h3 class="item-title">Den Helige Ande – Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Den Heliga Ande" data-file="Den Helige Ande Del 1.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Den Helige Ande – Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Den Heliga Ande" data-file="Den Helige Ande Del 2.m4a"></audio></li>
-      </ul>
-    </div>
-
-    <!-- TAB 4 -->
-    <div class="tab-content" id="tab4" role="tabpanel">
-      <h2>Försoningslära</h2>
-      <ul>
-        <li><div class="item-head"><h3 class="item-title">Försoningslära – Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Försoningslära" data-file="Försoningslära Del 1.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Försoningslära – Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Försoningslära" data-file="Försoningslära Del 2.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Försoningslära – Del 3</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Försoningslära" data-file="Försoningslära Del 3.m4a"></audio></li>
-      </ul>
-    </div>
-
-    <!-- TAB 5 -->
-    <div class="tab-content" id="tab5" role="tabpanel">
-      <h2>Kyrkohistoria</h2>
-      <ul>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 1.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 2.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 3</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 3.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 4</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 4.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 5</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 5.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 6</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 6.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 7</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 7.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 8</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 8.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 9</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 9.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 10</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 10.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 11</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 11.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 12</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 12.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 13</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 13.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 14</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 14.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 15</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 15.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 16</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 16.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 17</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 17.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 18</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 18.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Kyrkohistoria Del 19</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Kyrkohistoria Del 19.m4a"></audio></li>
-
-        <li><div class="item-head"><h3 class="item-title">Pingstväckelsens historia Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Pingstväckelsens historia Del 1.mp3"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Pingstväckelsens historia Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Kyrkohistoria" data-file="Pingstväckelsens historia Del 2.mp3"></audio></li>
-      </ul>
-    </div>
-
-    <!-- TAB 6 -->
-    <div class="tab-content" id="tab6" role="tabpanel">
-      <h2>Sex och relationer</h2>
-      <ul>
-        <li><div class="item-head"><h3 class="item-title">Sex och relationer Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Sex och relationer" data-file="Sex och relationer Del 1.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Sex och relationer Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Sex och relationer" data-file="Sex och relationer Del 2.m4a"></audio></li>
-      </ul>
-    </div>
-
-    <!-- TAB 7 -->
-    <div class="tab-content" id="tab7" role="tabpanel">
-      <h2>Änglar och demoner</h2>
-      <ul>
-        <li><div class="item-head"><h3 class="item-title">Änglar och demoner – Del 1</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Änglar och demoner" data-file="Anglar och demoner Del 1.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Änglar och demoner – Del 2</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Änglar och demoner" data-file="Anglar och demoner Del 2.m4a"></audio></li>
-        <li><div class="item-head"><h3 class="item-title">Änglar och demoner – Del 3</h3><span class="chip now-playing-chip" hidden>Spelas nu</span></div><audio controls preload="none" data-series="Änglar och demoner" data-file="Anglar och demoner Del 3.m4a"></audio></li>
-      </ul>
-    </div>
-
+    <div class="tab-container" id="tabList" role="tablist" aria-label="Undervisningsserier"></div>
+    <div id="tabPanels"></div>
   </main>
 
   <footer>
@@ -349,7 +35,9 @@
         <p class="mini-title" id="miniTitle">—</p>
         <p class="mini-sub" id="miniSub">—</p>
       </div>
+
       <audio class="mini-audio" id="miniAudio" controls></audio>
+
       <div class="mini-actions">
         <button class="btn" id="miniGoTo">Visa</button>
         <button class="btn primary" id="miniClear">Rensa</button>
@@ -359,81 +47,249 @@
 
   <script>
     /***********************
-     * 1) R2 base + URL builder
+     * 0) R2 BASE (bucket root)
      ***********************/
     const R2_BASE = "https://pub-bac38cc7629d4743b23aabcdaaebae74.r2.dev";
 
-    // R2 har "audio/" som root (som du ser i Cloudflare: bucket name audio)
-    // I din public-url ligger bucket-objekten som: /audio/<MAPP>/<FIL>
-    // Vi bygger en säker URL med korrekt encoding per segment.
-    function buildR2Url(seriesFolder, fileName){
-      const segments = ["audio", seriesFolder, fileName].map(s => encodeURIComponent(s));
+    // Build: https://pub-...r2.dev/<folder>/<file>
+    function buildR2Url(folderSlug, fileName) {
+      const segments = [folderSlug, fileName].map(s => encodeURIComponent(s));
       return `${R2_BASE}/${segments.join("/")}`;
     }
 
     /***********************
-     * 2) Tabs
+     * 1) MANIFEST – matchar exakt din R2
      ***********************/
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected','true');
-
-        contents.forEach(c => c.classList.remove('active'));
-        const target = document.getElementById(tab.dataset.tab);
-        if (target) target.classList.add('active');
-
-        // när man byter flik, om något spelar, scrolla mjukt till "spelas nu"
-        setTimeout(scrollToNowPlaying, 50);
-      });
-    });
+    const SERIES = [
+      {
+        id: "blodsforbundet",
+        tabTitle: "Blodsförbundet",
+        heading: "Blodsförbundet",
+        introHtml: "<p><strong>Tack Ola Gustavsson för inspirationen – mycket av materialet är hämtat från dina undervisningar.</strong></p>",
+        folder: "blodsforbundet",
+        items: Array.from({ length: 15 }, (_, i) => {
+          const n = i + 1;
+          return { title: `Blodsförbundet Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` };
+        })
+      },
+      {
+        id: "bon",
+        tabTitle: "Bön",
+        heading: "Bön",
+        folder: "bon",
+        items: [1, 2, 3].map(n => ({ title: `Bön Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` }))
+      },
+      {
+        id: "den-helige-ande",
+        tabTitle: "Den Helige Ande",
+        heading: "Den Helige Ande",
+        folder: "den-helige-ande",
+        items: [1, 2].map(n => ({ title: `Den Helige Ande – Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` }))
+      },
+      {
+        id: "forsoningslara",
+        tabTitle: "Försoningslära",
+        heading: "Försoningslära",
+        folder: "forsoningslara",
+        items: [1, 2, 3].map(n => ({ title: `Försoningslära – Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` }))
+      },
+      {
+        id: "kyrkohistoria",
+        tabTitle: "Kyrkohistoria",
+        heading: "Kyrkohistoria",
+        folder: "kyrkohistoria",
+        items: [
+          ...Array.from({ length: 19 }, (_, i) => {
+            const n = i + 1;
+            return { title: `Kyrkohistoria Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` };
+          }),
+          { title: "Pingstväckelsens historia Del 1", file: "pingstvackelsens-historia-del-01.mp3" },
+          { title: "Pingstväckelsens historia Del 2", file: "pingstvackelsens-historia-del-02.mp3" }
+        ]
+      },
+      {
+        id: "sex-och-relationer",
+        tabTitle: "Sex och relationer",
+        heading: "Sex och relationer",
+        folder: "sex-och-relationer",
+        items: [1, 2].map(n => ({ title: `Sex och relationer Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` }))
+      },
+      {
+        id: "anglar-och-demoner",
+        tabTitle: "Änglar och demoner",
+        heading: "Änglar och demoner",
+        folder: "anglar-och-demoner",
+        items: [1, 2, 3].map(n => ({ title: `Änglar och demoner – Del ${n}`, file: `del-${String(n).padStart(2, "0")}.m4a` }))
+      }
+    ];
 
     /***********************
-     * 3) Wire up all audio tags to R2
+     * 2) Render tabs + panels
      ***********************/
-    const audioEls = Array.from(document.querySelectorAll('audio[data-series][data-file]'));
+    const tabList = document.getElementById("tabList");
+    const tabPanels = document.getElementById("tabPanels");
 
+    function el(tag, attrs = {}, children = []) {
+      const node = document.createElement(tag);
+      for (const [k, v] of Object.entries(attrs)) {
+        if (k === "class") node.className = v;
+        else if (k === "html") node.innerHTML = v;
+        else node.setAttribute(k, v);
+      }
+      for (const c of children) node.appendChild(c);
+      return node;
+    }
+
+    function render() {
+      tabList.innerHTML = "";
+      tabPanels.innerHTML = "";
+
+      SERIES.forEach((s, idx) => {
+        // TAB
+        const tab = el("div", {
+          class: "tab" + (idx === 0 ? " active" : ""),
+          role: "tab",
+          "aria-selected": idx === 0 ? "true" : "false",
+          "data-tab": s.id
+        });
+        tab.textContent = s.tabTitle;
+        tabList.appendChild(tab);
+
+        // PANEL
+        const panel = el("div", {
+          class: "tab-content" + (idx === 0 ? " active" : ""),
+          id: s.id,
+          role: "tabpanel"
+        });
+
+        panel.appendChild(el("h2", {}, [document.createTextNode(s.heading)]));
+        if (s.introHtml) panel.appendChild(el("div", { html: s.introHtml }));
+
+        const ul = el("ul");
+        s.items.forEach(item => {
+          const li = el("li");
+
+          const head = el("div", { class: "item-head" });
+          const h3 = el("h3", { class: "item-title" }, [document.createTextNode(item.title)]);
+          const chip = el("span", { class: "chip now-playing-chip", hidden: "true" }, [document.createTextNode("Spelas nu")]);
+
+          head.appendChild(h3);
+          head.appendChild(chip);
+
+          const audio = el("audio", {
+            controls: "true",
+            preload: "none",
+            "data-series-id": s.id,
+            "data-series-title": s.tabTitle,
+            "data-folder": s.folder,
+            "data-file": item.file,
+            "data-title": item.title
+          });
+
+          li.appendChild(head);
+          li.appendChild(audio);
+          ul.appendChild(li);
+        });
+
+        panel.appendChild(ul);
+        tabPanels.appendChild(panel);
+      });
+    }
+
+    render();
+
+    /***********************
+     * 3) Tabs behavior
+     ***********************/
+    const tabs = () => Array.from(document.querySelectorAll(".tab"));
+    const panels = () => Array.from(document.querySelectorAll(".tab-content"));
+
+    function activateTab(tabId) {
+      tabs().forEach(t => {
+        const isActive = t.dataset.tab === tabId;
+        t.classList.toggle("active", isActive);
+        t.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+      panels().forEach(p => p.classList.toggle("active", p.id === tabId));
+      setTimeout(scrollToNowPlaying, 50);
+    }
+
+    tabs().forEach(t => t.addEventListener("click", () => activateTab(t.dataset.tab)));
+
+    /***********************
+     * 4) Wire audio sources from manifest
+     ***********************/
+    const audioEls = Array.from(document.querySelectorAll('audio[data-folder][data-file]'));
     audioEls.forEach(a => {
-      const series = a.getAttribute("data-series");
+      const folder = a.getAttribute("data-folder");
       const file = a.getAttribute("data-file");
-      a.src = buildR2Url(series, file);
+      a.src = buildR2Url(folder, file);
       a.preload = "none";
     });
 
     /***********************
-     * 4) Autopause + "Spelas nu" + scroll
+     * 5) Autopause + Now playing chip + scroll
      ***********************/
     let currentAudio = null;
 
-    function clearNowPlayingChips(){
-      document.querySelectorAll('.now-playing-chip').forEach(chip => chip.hidden = true);
-      document.querySelectorAll('li').forEach(li => li.style.outline = "");
+    function clearNowPlayingChips() {
+      document.querySelectorAll(".now-playing-chip").forEach(chip => chip.hidden = true);
+      document.querySelectorAll("li").forEach(li => li.style.outline = "");
     }
 
-    function markNowPlaying(audioEl){
+    function markNowPlaying(audioEl) {
       clearNowPlayingChips();
-      const li = audioEl.closest('li');
+      const li = audioEl.closest("li");
       if (!li) return;
       li.style.outline = "3px solid rgba(0,91,150,.20)";
-      const chip = li.querySelector('.now-playing-chip');
+      const chip = li.querySelector(".now-playing-chip");
       if (chip) chip.hidden = false;
     }
 
-    function scrollToNowPlaying(){
+    function scrollToNowPlaying() {
       const playing = currentAudio && !currentAudio.paused ? currentAudio : null;
       if (!playing) return;
-      const li = playing.closest('li');
+      const li = playing.closest("li");
       if (!li) return;
       li.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
+    function activateTabForAudio(audioEl) {
+      const panel = audioEl.closest(".tab-content");
+      if (!panel) return;
+      activateTab(panel.id);
+    }
+
+    /***********************
+     * 6) Remember last playback (localStorage)
+     ***********************/
+    const STORAGE_KEY = "pm_last_playback_v3";
+
+    function saveLastPlaybackFromAudio(audioEl, extra = {}) {
+      const payload = {
+        src: audioEl.currentSrc || audioEl.src,
+        series: audioEl.getAttribute("data-series-title") || "Okänd serie",
+        title: audioEl.getAttribute("data-title") || "Okänt avsnitt",
+        time: isFinite(audioEl.currentTime) ? audioEl.currentTime : 0,
+        updatedAt: Date.now(),
+        ...extra
+      };
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch (e) {}
+    }
+
+    function loadLastPlayback() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch (e) {
+        return null;
+      }
+    }
+
     audioEls.forEach(a => {
-      a.addEventListener('play', () => {
-        // Pausa alla andra
+      a.addEventListener("play", () => {
+        // pausa alla andra
         audioEls.forEach(other => {
           if (other !== a && !other.paused) other.pause();
         });
@@ -443,134 +299,73 @@
         saveLastPlaybackFromAudio(a);
         updateMiniPlayerFromAudio(a);
 
-        // se till att fliken där den finns är aktiv
         activateTabForAudio(a);
-
-        // scrolla diskret
         setTimeout(scrollToNowPlaying, 80);
       });
 
-      a.addEventListener('pause', () => {
-        if (currentAudio === a) {
-          // Låt chip vara kvar om man vill – men vi döljer den när det är pausat
-          clearNowPlayingChips();
-        }
+      a.addEventListener("pause", () => {
+        if (currentAudio === a) clearNowPlayingChips();
       });
 
-      a.addEventListener('timeupdate', () => {
+      a.addEventListener("timeupdate", () => {
         if (currentAudio === a && !a.paused) {
           saveLastPlaybackFromAudio(a);
           updateMiniPlayerFromAudio(a);
         }
       });
 
-      a.addEventListener('ended', () => {
+      a.addEventListener("ended", () => {
         if (currentAudio === a) {
           clearNowPlayingChips();
-          saveLastPlaybackFromAudio(a, { ended:true });
+          saveLastPlaybackFromAudio(a, { ended: true });
           updateMiniPlayerFromAudio(a);
         }
       });
 
-      // om det failar: logga lätt
-      a.addEventListener('error', () => {
+      a.addEventListener("error", () => {
         console.warn("Audio error:", a.src);
       });
     });
 
-    function activateTabForAudio(audioEl){
-      const panel = audioEl.closest('.tab-content');
-      if (!panel) return;
-      const id = panel.id;
-
-      tabs.forEach(t => {
-        const isActive = t.dataset.tab === id;
-        t.classList.toggle('active', isActive);
-        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
-
-      contents.forEach(c => c.classList.toggle('active', c.id === id));
-    }
-
     /***********************
-     * 5) Remember last playback (localStorage)
+     * 7) Mini player
      ***********************/
-    const STORAGE_KEY = "pm_last_playback_v1";
+    const miniPlayer = document.getElementById("miniPlayer");
+    const miniAudio = document.getElementById("miniAudio");
+    const miniTitle = document.getElementById("miniTitle");
+    const miniSub = document.getElementById("miniSub");
+    const miniGoTo = document.getElementById("miniGoTo");
+    const miniClear = document.getElementById("miniClear");
 
-    function getTitleForAudio(audioEl){
-      const li = audioEl.closest('li');
-      const h3 = li ? li.querySelector('.item-title') : null;
-      return h3 ? h3.textContent.trim() : "Okänt avsnitt";
-    }
-
-    function getSeriesForAudio(audioEl){
-      return audioEl.getAttribute("data-series") || "Okänd serie";
-    }
-
-    function saveLastPlaybackFromAudio(audioEl, extra = {}){
-      const payload = {
-        src: audioEl.currentSrc || audioEl.src,
-        series: getSeriesForAudio(audioEl),
-        title: getTitleForAudio(audioEl),
-        time: isFinite(audioEl.currentTime) ? audioEl.currentTime : 0,
-        updatedAt: Date.now(),
-        ...extra
-      };
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch(e){}
-    }
-
-    function loadLastPlayback(){
-      try{
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return null;
-        return JSON.parse(raw);
-      } catch(e){
-        return null;
-      }
-    }
-
-    /***********************
-     * 6) Mini player
-     ***********************/
-    const miniPlayer = document.getElementById('miniPlayer');
-    const miniAudio = document.getElementById('miniAudio');
-    const miniTitle = document.getElementById('miniTitle');
-    const miniSub = document.getElementById('miniSub');
-    const miniGoTo = document.getElementById('miniGoTo');
-    const miniClear = document.getElementById('miniClear');
-
-    function updateMiniPlayerFromAudio(audioEl){
-      const data = {
-        src: audioEl.currentSrc || audioEl.src,
-        series: getSeriesForAudio(audioEl),
-        title: getTitleForAudio(audioEl),
-        time: audioEl.currentTime || 0
-      };
-      showMiniPlayer(data);
-    }
-
-    function showMiniPlayer(data){
+    function showMiniPlayer(data) {
       if (!data || !data.src) return;
       miniPlayer.hidden = false;
       miniTitle.textContent = data.title || "—";
       miniSub.textContent = `Kategori: ${data.series || "—"}`;
 
-      // Sätt src om den skiljer sig
       if (miniAudio.src !== data.src) {
         miniAudio.src = data.src;
         miniAudio.currentTime = 0;
       }
-
-      // Försök synka tiden (om möjligt)
       if (isFinite(data.time) && data.time > 0) {
-        try { miniAudio.currentTime = data.time; } catch(e){}
+        try { miniAudio.currentTime = data.time; } catch (e) {}
       }
     }
 
-    miniAudio.addEventListener('play', () => {
-      // Pausa alla andra när mini spelar
+    function updateMiniPlayerFromAudio(audioEl) {
+      showMiniPlayer({
+        src: audioEl.currentSrc || audioEl.src,
+        series: audioEl.getAttribute("data-series-title") || "Okänd serie",
+        title: audioEl.getAttribute("data-title") || "Okänt avsnitt",
+        time: audioEl.currentTime || 0
+      });
+    }
+
+    miniAudio.addEventListener("play", () => {
+      // pausa alla andra
       audioEls.forEach(other => { if (!other.paused) other.pause(); });
-      // Markera inget i listan (mini kan vara "frikopplad"), men vi kan försöka matcha
+
+      // matcha miniplayer src till list-audio om möjligt
       const match = audioEls.find(a => (a.currentSrc || a.src) === miniAudio.currentSrc);
       if (match) {
         currentAudio = match;
@@ -580,14 +375,14 @@
       }
     });
 
-    miniAudio.addEventListener('timeupdate', () => {
+    miniAudio.addEventListener("timeupdate", () => {
       const existing = loadLastPlayback();
       if (!existing) return;
       const payload = { ...existing, time: miniAudio.currentTime || 0, updatedAt: Date.now() };
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch(e){}
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(payload)); } catch (e) {}
     });
 
-    miniGoTo.addEventListener('click', () => {
+    miniGoTo.addEventListener("click", () => {
       const match = audioEls.find(a => (a.currentSrc || a.src) === miniAudio.currentSrc);
       if (match) {
         activateTabForAudio(match);
@@ -599,22 +394,20 @@
       }
     });
 
-    miniClear.addEventListener('click', () => {
-      try { localStorage.removeItem(STORAGE_KEY); } catch(e){}
+    miniClear.addEventListener("click", () => {
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
       miniAudio.pause();
-      miniAudio.removeAttribute('src');
+      miniAudio.removeAttribute("src");
       miniAudio.load();
       miniPlayer.hidden = true;
       clearNowPlayingChips();
       currentAudio = null;
     });
 
-    // Restore last playback on load
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       const last = loadLastPlayback();
       if (last && last.src) {
         showMiniPlayer(last);
-        // försök förladda metadata så att tiden går att hoppa till
         miniAudio.preload = "metadata";
       }
     });
