@@ -50,6 +50,19 @@
      * 0) R2 BASE (bucket root)
      ***********************/
     const R2_BASE = "https://pub-bac38cc7629d4743b23aabcdaaebae74.r2.dev";
+function setMediaSession({ title, series }) {
+  if (!("mediaSession" in navigator)) return;
+
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: title || "—",
+    artist: series || "—",
+    album: "Pastor Martins undervisning"
+  });
+
+  navigator.mediaSession.setActionHandler("play", () => miniAudio.play());
+  navigator.mediaSession.setActionHandler("pause", () => miniAudio.pause());
+}
+
 
     // Build: https://pub-...r2.dev/<folder>/<file>
     function buildR2Url(folderSlug, fileName) {
@@ -352,14 +365,20 @@
       }
     }
 
-    function updateMiniPlayerFromAudio(audioEl) {
-      showMiniPlayer({
-        src: audioEl.currentSrc || audioEl.src,
-        series: audioEl.getAttribute("data-series-title") || "Okänd serie",
-        title: audioEl.getAttribute("data-title") || "Okänt avsnitt",
-        time: audioEl.currentTime || 0
-      });
-    }
+  function updateMiniPlayerFromAudio(audioEl) {
+  showMiniPlayer({
+    src: audioEl.currentSrc || audioEl.src,
+    series: audioEl.getAttribute("data-series-title") || "Okänd serie",
+    title: audioEl.getAttribute("data-title") || "Okänt avsnitt",
+    time: audioEl.currentTime || 0
+  });
+
+  setMediaSession({
+    title: audioEl.getAttribute("data-title") || "Okänt avsnitt",
+    series: audioEl.getAttribute("data-series-title") || "Okänd serie"
+  });
+}
+
 
     miniAudio.addEventListener("play", () => {
       // pausa alla andra
